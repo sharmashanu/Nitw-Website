@@ -1,0 +1,147 @@
+body{
+    color: red;
+}
+
+.js-carousel-container{
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 13px -4px rgba(0, 0, 0, .65);
+}
+
+.js-carousel-container:before,
+.js-carousel-container:after{
+    position: absolute;
+    z-index: -1;
+    bottom: 65px;
+    left: 0;
+    width: 50%;
+    height: 20px;
+    content: '';
+    border-radius: 100%;
+    box-shadow: 0 67px 20px -3px rgba(40, 40, 40, .63);
+}
+
+.js-carousel-container:after{
+    right: 0;
+    left: initial;
+    transform: rotateZ(2deg);
+}
+
+.js-carousel-container:before{
+    transform: rotateZ(-2deg);
+}
+
+
+
+
+
+/*JSCAROUSEL STYLES*/
+.js-carousel{
+    position: relative;
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.js-carousel li{
+    display: none;
+}
+
+.js-carousel li:first-child{
+    display: block;
+}
+
+.js-carousel.loaded li{
+    font-size: 93px;
+    line-height: 240px;
+    position: relative;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #2f2f2f;
+}
+
+.js-carousel.loaded li a{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.js-carousel-prev-button,
+.js-carousel-next-button{
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    bottom: 0;
+    left: -20px;
+    width: 0;
+    height: 0;
+    margin-top: -20px;
+    cursor: pointer;
+    color: #395058;
+    border: 20px solid #ffe;
+    border-radius: 100%;
+    box-shadow: 0 1px 12px -2px rgba(0, 0, 0, .46);
+}
+
+.js-carousel-next-button{
+    right: -20px;
+    left: initial;
+}
+.js-carousel-next-button:before{
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    content: '►';
+}
+
+.js-carousel-prev-button:before{
+    position: absolute;
+    top: -7px;
+    left: -10px;
+    content: '◄';
+}
+
+.js-carousel-prev-button:hover,
+.js-carousel-next-button:hover{
+    color: #fc6216;
+}
+
+.js-carousel-bullets-wrapper{
+    position: absolute;
+    z-index: 2;
+    bottom: -12px;
+    left: 50%;
+}
+
+.js-carousel-bullets-wrapper > div{
+    position: relative;
+    left: -50%;
+    background-color: red;
+}
+
+.js-carousel-bullets-wrapper .bullet{
+    position: relative;
+    float: left;
+    width: 5px;
+    height: 5px;
+    margin: 0 2px;
+    cursor: pointer;
+    text-indent: -4000px;
+    border: 12px solid #ffe;
+    border-radius: 100%;
+    background-color: #395058;
+    box-shadow: 0 1px 12px -2px rgba(0, 0, 0, .46);
+}
+
+.js-carousel-bullets-wrapper .bullet.active,
+.js-carousel-bullets-wrapper .bullet:hover{
+    background-color: #fc6216;
+}
